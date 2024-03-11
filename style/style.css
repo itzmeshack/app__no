@@ -60,12 +60,19 @@
 
     }
 
+    .nav-list:hover {
+        cursor: pointer;
+        border-bottom: 10px rgb(25, 66, 189) solid;
+    }
 
 
 
-   .note{
-    font-size: 17px;
-   }
+
+    .note {
+        font-size: 17px;
+        position: relative;
+        top: -2em;
+    }
 
 
     .all-container {
@@ -77,11 +84,22 @@
         border-radius: 10px;
     }
 
+    .word {
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
 
 
     .scanner {
 
         text-align: center;
+        margin-left: 2em;
+        margin-right: 2em;
+        align-items: center;
+        position: relative;
+        margin-top: 1em;
+        padding: 1em;
+
 
 
 
@@ -89,18 +107,34 @@
 
     .scan {
         align-items: center;
-        position: relative;
-        top: -100px;
+
+
+
 
     }
 
     .scan-code {
-        width: 100%;
-        border-radius: 10px;
-        align-items: center;
+        width: 60%;
         position: relative;
+        top: 1em;
+        margin-bottom: 7em;
 
 
+
+
+
+
+
+
+
+    }
+
+    .day-rider {
+
+        position: relative;
+        text-align: center;
+        padding: 1em;
+        top: -6em;
     }
 
     .adult-section {
@@ -109,32 +143,41 @@
         padding: 10px 5px 10px 5px;
         border-top: 1px solid black;
         border-bottom: 1px solid black;
-        padding: 1em;
         font-family: Arial, Helvetica, sans-serif;
         position: relative;
         top: -4em;
         margin: 1em;
+        font-weight: bolder;
+        font-size: 20px;
     }
 
     .time-section {
         text-align: center;
+        position: relative;
+        top: -2em;
+
+
     }
 
     .sec {
         font-family: Arial, Helvetica, sans-serif;
         position: relative;
-        top: -1em;
+        top: -3em;
         font-size: 20px;
+        padding: 3px 0px 3px 0px;
+
     }
 
     .main-time {
         background-color: darkgray;
         background-image: url(/images/Animated\ Shape\ \(5\).svg);
         color: black;
-        padding: 1.7em;
+        padding: 1.8em;
         font-size: 25px;
-       font-family: Arial, Helvetica, sans-serif;
-        animation: rotate 9s infinite;
+        font-family: Arial, Helvetica, sans-serif;
+        animation: rotate 8s infinite;
+        position: relative;
+        top: -2em;
 
 
     }
@@ -142,7 +185,7 @@
     .main-time span {
         left: 0;
         right: 0;
-       top: 1em;
+        top: 1em;
         bottom: 0;
         position: absolute;
         text-align: center;
@@ -154,7 +197,7 @@
         opacity: 1;
     }
 
-    .time{
+    .time {
         color: rgb(0, 0, 0);
         font-size: .9em;
         font-weight: bolder;
@@ -170,7 +213,7 @@
 
     @keyframes rotate {
         0% {
-            transform: rotate(-20deg);
+            transform: rotate(20deg);
         }
 
         100% {
@@ -200,11 +243,14 @@
 
 
     .tic-expires {
-        padding: 2em;
+        padding: 3em;
     }
 
     .note-section {
-        padding: 1em;
+        padding: 2em;
+        position: relative;
+        top: -6.5em;
+
 
 
     }
@@ -214,6 +260,8 @@
         background-color: lightgray;
         margin: 2em;
         border-radius: 20px;
+        position: relative;
+        top: -3em;
 
     }
 
@@ -221,5 +269,10 @@
     .links {
         text-decoration: none;
         color: green;
+    }
+
+    .more {
+        position: relative;
+        top: -4em;
     }
 }

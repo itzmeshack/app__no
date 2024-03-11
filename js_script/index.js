@@ -77,7 +77,7 @@ function getUKTime() {
   const minutes = now.getUTCMinutes();
   const seconds = now.getUTCSeconds();
 
-  return formatTime(hours) + ':' + formatTime(minutes) + ':' + formatTime(seconds);
+  return formatTime(hours) + ':' + formatTime(minutes) //*+ ':' + formatTime(seconds)*/ ;
 }
 
 function formatTime(time) {
