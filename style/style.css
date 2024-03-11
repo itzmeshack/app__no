@@ -1,0 +1,225 @@
+@media only screen and (max-width: 1180px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgba(208, 208, 208, 0.55);
+
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    header.main-container {
+        background-color: rgb(7, 7, 55);
+        padding: 10px 10px 0px 0px;
+
+    }
+
+    #bar {
+        font-size: 30px;
+    }
+
+    .cart {
+        font-size: px;
+    }
+
+
+    .nav-bar {
+        width: 100vw;
+
+    }
+
+    .navigation-link {
+
+        display: flex;
+        justify-content: space-between;
+        padding: .9em;
+        color: white;
+
+    }
+
+
+
+
+
+    .nav-containter {
+        color: white;
+
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        padding: .9em;
+        font-size: 16px;
+
+
+    }
+
+
+
+
+   .note{
+    font-size: 17px;
+   }
+
+
+    .all-container {
+        margin-top: 1em;
+        margin-right: .5em;
+        margin-left: .5em;
+
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+    }
+
+
+
+    .scanner {
+
+        text-align: center;
+
+
+
+    }
+
+    .scan {
+        align-items: center;
+        position: relative;
+        top: -100px;
+
+    }
+
+    .scan-code {
+        width: 100%;
+        border-radius: 10px;
+        align-items: center;
+        position: relative;
+
+
+    }
+
+    .adult-section {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px 10px 5px;
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 1em;
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        top: -4em;
+        margin: 1em;
+    }
+
+    .time-section {
+        text-align: center;
+    }
+
+    .sec {
+        font-family: Arial, Helvetica, sans-serif;
+        position: relative;
+        top: -1em;
+        font-size: 20px;
+    }
+
+    .main-time {
+        background-color: darkgray;
+        background-image: url(/images/Animated\ Shape\ \(5\).svg);
+        color: black;
+        padding: 1.6em;
+        font-size: 25px;
+       font-family: Arial, Helvetica, sans-serif;
+        animation: rotate 2s infinite;
+
+
+    }
+
+    .main-time span {
+        left: 0;
+        right: 0;
+       top: 1em;
+        bottom: 0;
+        position: absolute;
+        text-align: center;
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    .main-time span.active {
+        opacity: 1;
+    }
+
+    .time{
+        color: rgb(0, 0, 0);
+        font-size: .9em;
+        font-weight: bolder;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    }
+
+
+
+
+
+    /*  FOR KEYFRAME EFFECTS*/
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(20deg);
+        }
+
+        100% {
+            transform: rotate(-10deg);
+        }
+
+
+
+    }
+
+    ;
+
+    @keyframes rotateleft {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-20deg);
+        }
+    }
+
+
+
+
+
+
+
+    .tic-expires {
+        padding: 2em;
+    }
+
+    .note-section {
+        padding: 1em;
+
+
+    }
+
+    .code-section {
+        padding: .6em;
+        background-color: lightgray;
+        margin: 2em;
+        border-radius: 20px;
+
+    }
+
+
+    .links {
+        text-decoration: none;
+        color: green;
+    }
+}
