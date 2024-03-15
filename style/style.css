@@ -115,7 +115,7 @@
     }
 
     .scan-code {
-      
+        width: 60%;
         position: relative;
         top: 1em;
         margin-bottom: 7em;
