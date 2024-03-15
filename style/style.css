@@ -94,11 +94,12 @@
     .scanner {
 
         text-align: center;
+   
         margin-left: 2em;
         margin-right: 2em;
         align-items: center;
         position: relative;
-        margin-top: 1em;
+
       
 
 
@@ -114,7 +115,7 @@
     }
 
     .scan-code {
-        width: 70%;
+        width: 75%;
         position: relative;
         top: 1em;
         margin-bottom: 7em;
@@ -203,6 +204,17 @@
         font-weight: bolder;
         font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 
+    }
+
+    .word{
+        font-weight: bold;
+     
+         
+         
+
+   
+      
+        text-align: center;
     }
 
 
