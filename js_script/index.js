@@ -83,3 +83,37 @@ function getUKTime() {
 function formatTime(time) {
   return time < 10 ? '0' + time : time;
 }
+
+
+
+/** For date part */
+
+
+
+
+function upadeDate(){
+
+  let currentDate = new Date();
+  let day = currentDate.getDate();
+  let month = currentDate.getMonth();
+  let year = currentDate.getFullYear();
+
+
+
+   let monthNames = [
+    "Jan", "Feb", "Mar", "Apr", "May", "June", "July",
+    "Aug", "September", "October", "November", "December"
+  ];
+
+  let monthname = monthNames[month];
+
+  document.getElementById('date').innerHTML = `Valid from: 00:00, ${day}  ${monthname} ${year}`;
+
+}
+
+
+document.addEventListener('DOMContentLoaded', upadeDate );
+
+
+
+
