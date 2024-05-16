@@ -1,4 +1,4 @@
-window.addEventListener("deviceorientation", handleOrientation);
+/*window.addEventListener("deviceorientation", handleOrientation);
 
 function handleOrientation(event) {
   var gamma = event.gamma; // rotation around the Y-axis (left to right)
@@ -10,6 +10,47 @@ function handleOrientation(event) {
     document.getElementById("phone").style.animation = "rotateLeft 0.5s forwards";
   }
 };
+*/
+
+
+
+
+
+function handleDeviceOrientation(event) {
+    let alpha = event.alpha;
+    let beta = event.beta;
+    let gamma = event.gamma;
+
+    // Define thresholds for orientation detection
+    let leftThreshold = -20; // Adjust as needed
+    let rightThreshold = 20; // Adjust as needed
+
+
+    let backgroundElement = document.querySelector('.main-time');
+    // Check if the device is tilted to the left
+    if (gamma  < leftThreshold) {
+      backgroundElement.style.transform = 'rotate(20deg)';
+    }
+    // Check if the device is tilted to the right
+    else if (gamma  > rightThreshold) {
+      backgroundElement.style.transform = 'rotate(-20deg)';
+    }
+    // Reset the rotation if not tilted
+    else if (gamma  !== rightThreshold && leftThreshold) {
+      backgroundElement.style.transform = 'rotate(0deg)';
+    }
+}
+
+
+
+window.addEventListener('deviceorientation', handleDeviceOrientation);
+
+
+
+
+
+
+
 
 
 // Set the expiration time in hours
@@ -44,7 +85,7 @@ function updateTimer() {
 
 
 
-// Update the timer every second
+// Update the timer change  every second
 const timerInterval = setInterval(updateTimer, 1000);
 
 
