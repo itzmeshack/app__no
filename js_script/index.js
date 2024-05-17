@@ -1,54 +1,140 @@
-/*window.addEventListener("deviceorientation", handleOrientation);
-
-function handleOrientation(event) {
-  var gamma = event.gamma; // rotation around the Y-axis (left to right)
-  var beta = event.beta;   // rotation around the X-axis (front to back)
-
-  if (gamma > 10) {
-    document.getElementById("phone").style.animation = "rotateRight 0.5s forwards";
-  } else if (gamma < -10) {
-    document.getElementById("phone").style.animation = "rotateLeft 0.5s forwards";
-  }
-};
-*/
-
 
 
 
 
 function handleDeviceOrientation(event) {
-    let alpha = event.alpha;
-    let beta = event.beta;
-    let gamma = event.gamma;
+  let gamma = event.gamma;
+  console.log('Gamma:', gamma);
 
-    // Define thresholds for orientation detection
-    let leftThreshold = -20; // Adjust as needed
-    let rightThreshold = 20; // Adjust as needed
+  // Define thresholds for orientation detection
+  let leftThreshold = -20;  // Adjust as needed
+  let rightThreshold = 20;  // Adjust as needed
 
+  let backgroundElement = document.querySelector('.main-time');
 
-    let backgroundElement = document.querySelector('.main-time');
-    // Check if the device is tilted to the left
-    if (gamma  < leftThreshold) {
+  // Check if the device is tilted to the left
+  if (gamma < leftThreshold) {
       backgroundElement.style.transform = 'rotate(20deg)';
-    }
-    // Check if the device is tilted to the right
-    else if (gamma  > rightThreshold) {
+  }
+  // Check if the device is tilted to the right
+  else if (gamma > rightThreshold) {
       backgroundElement.style.transform = 'rotate(-20deg)';
-    }
-    // Reset the rotation if not tilted
-    else if (gamma  !== rightThreshold && leftThreshold) {
+  }
+  // Reset the rotation if not tilted
+  else {
       backgroundElement.style.transform = 'rotate(0deg)';
-    }
+  }
 }
 
+function requestOrientationPermission() {
+  if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
+      DeviceMotionEvent.requestPermission()
+          .then(permissionState => {
+              if (permissionState === 'granted') {
+                  window.addEventListener('deviceorientation', handleDeviceOrientation);
+              } else {
+                  console.log('Permission denied for device motion.');
+              }
+          })
+          .catch(console.error);
+  } else {
+      // Handle regular non-iOS 13+ devices
+      window.addEventListener('deviceorientation', handleDeviceOrientation);
+  }
+}
+
+// Request permission and add event listener when the page loads
+window.addEventListener('load', requestOrientationPermission);
 
 
-window.addEventListener('deviceorientation', handleDeviceOrientation);
+/*
 
 
 
 
+function simulateDeviceMotion(gamma) {
+  let event = new Event('devicemotion');
 
+  event.accelerationIncludingGravity = {
+      x: gamma,
+      y: 0,
+      z: 0
+  };
+
+  window.dispatchEvent(event);
+}
+
+function handleDeviceMotion(event) {
+  let acceleration = event.accelerationIncludingGravity;
+  let gamma = acceleration.x;  // Using x-axis acceleration to simulate gamma
+
+  console.log(gamma);
+
+  // Define thresholds for orientation detection
+  let leftThreshold = -20;  // Adjust as needed
+  let rightThreshold = 20;  // Adjust as needed
+
+  let backgroundElement = document.querySelector('.main-time');
+
+  // Check if the device is tilted to the left
+  if (gamma < leftThreshold) {
+      backgroundElement.style.transform = 'rotate(20deg)';
+  }
+  // Check if the device is tilted to the right
+  else if (gamma > rightThreshold) {
+      backgroundElement.style.transform = 'rotate(-20deg)';
+  }
+  // Reset the rotation if not tilted
+  else {
+      backgroundElement.style.transform = 'rotate(0deg)';
+  }
+}
+
+// Add event listener for device motion
+window.addEventListener('devicemotion', handleDeviceMotion);
+
+// Simulate device motion for testing
+// Test left tilt
+simulateDeviceMotion(-20);  // Should rotate 20deg to the left
+// Test right tilt
+simulateDeviceMotion(20);   // Should rotate -20deg to the right
+// Test no tilt
+simulateDeviceMotion(0);    // Should rotate back to 0deg
+
+
+
+/*
+
+
+function handleDeviceMotion(event) {
+  let acceleration = event.accelerationIncludingGravity;
+  let xAcceleration = acceleration.x;
+
+
+  console.log(xAcceleration)
+  let threshold = 10;
+
+  if (Math.abs(xAcceleration) > threshold) {
+      let direction = xAcceleration < 0 ? 'right' : 'left';
+      handleBend(direction);
+  }
+}
+
+function handleBend(direction) {
+  let backgroundElement = document.querySelector('.main-time');
+
+  // Adjust the rotation angle based on the bend direction
+  let rotationAngle = direction === 'right' ? '-20deg' : '20deg';
+
+  // Apply the rotation to the background element
+  backgroundElement.style.transform = `rotate(${rotationAngle})`;
+}
+
+// Add event listener for device motion
+window.addEventListener('devicemotion', handleDeviceMotion, { passive: true });
+
+
+*/
 
 
 
