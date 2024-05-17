@@ -1,7 +1,7 @@
 
 
 
-
+/*
 function handleDeviceOrientation(event) {
   let gamma = event.gamma;
   console.log('Gamma:', gamma);
@@ -244,3 +244,20 @@ document.addEventListener('DOMContentLoaded', upadeDate );
 
 
 
+
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+  const permissionButton = document.createElement('button');
+  permissionButton.innerText = 'Enable Orientation';
+  permissionButton.style.position = 'absolute';
+  permissionButton.style.top = '10px';
+  permissionButton.style.left = '10px';
+  document.body.appendChild(permissionButton);
+
+  permissionButton.addEventListener('click', () => {
+      requestOrientationPermission();
+      permissionButton.style.display = 'none';
+  });
+});
+*/
