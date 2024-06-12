@@ -1,7 +1,7 @@
 
 
 
-/*
+
 function handleDeviceOrientation(event) {
   let gamma = event.gamma;
   console.log('Gamma:', gamma);
@@ -14,37 +14,51 @@ function handleDeviceOrientation(event) {
 
   // Check if the device is tilted to the left
   if (gamma < leftThreshold) {
-      backgroundElement.style.transform = 'rotate(20deg)';
+    backgroundElement.style.transform = 'rotate(20deg)';
   }
   // Check if the device is tilted to the right
   else if (gamma > rightThreshold) {
-      backgroundElement.style.transform = 'rotate(-20deg)';
+    backgroundElement.style.transform = 'rotate(-20deg)';
   }
   // Reset the rotation if not tilted
   else {
-      backgroundElement.style.transform = 'rotate(0deg)';
+    backgroundElement.style.transform = 'rotate(0deg)';
   }
 }
 
 function requestOrientationPermission() {
   if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
-      DeviceMotionEvent.requestPermission()
-          .then(permissionState => {
-              if (permissionState === 'granted') {
-                  window.addEventListener('deviceorientation', handleDeviceOrientation);
-              } else {
-                  console.log('Permission denied for device motion.');
-              }
-          })
-          .catch(console.error);
+    DeviceMotionEvent.requestPermission()
+      .then(permissionState => {
+        if (permissionState === 'granted') {
+          window.addEventListener('deviceorientation', handleDeviceOrientation);
+        } else {
+          console.log('Permission denied for device motion.');
+        }
+      })
+      .catch(console.error);
   } else {
-      // Handle regular non-iOS 13+ devices
-      window.addEventListener('deviceorientation', handleDeviceOrientation);
+    // Handle regular non-iOS 13+ devices
+    window.addEventListener('deviceorientation', handleDeviceOrientation);
   }
 }
 
 // Request permission and add event listener when the page loads
-window.addEventListener('load', requestOrientationPermission);
+window.addEventListener('load', () => {
+  if (typeof DeviceOrientationEvent !== 'undefined' && DeviceOrientationEvent.requestPermission) {
+    requestOrientationPermission();
+  } else {
+    window.addEventListener('deviceorientation', handleDeviceOrientation);
+  }
+});
+
+// Fallback to prompt the user to interact with the page to grant permission
+document.body.addEventListener('click', () => {
+  if (typeof DeviceOrientationEvent !== 'undefined' && DeviceOrientationEvent.requestPermission) {
+    requestOrientationPermission();
+  }
+});
+
 
 
 /*
