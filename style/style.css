@@ -165,7 +165,7 @@
     }
 
     .main-time {
-        background-color:orange;
+        background-color:gray;
 
         background-image: url('../images/bg.svg');
         color: black;
@@ -208,7 +208,8 @@
 
     .word {
         font-size: 30px;
-        font-weight: 700;
+        font-weight: bolder;
+   
          font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 
