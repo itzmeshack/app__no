@@ -165,7 +165,7 @@
     }
 
     .main-time {
-        background-color:  rgba(31, 174, 226, 0.963);
+        background-color:  gray;
         background-image: url('../images/bg.svg');
         color: black;
         padding: 1.5em;
