@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function getUKTime() {
   const now = new Date();
-  const hours = now.getUTCHours() + 1; // Adjust for UK time
+  const hours = now.getUTCHours() + 0; // Adjust for UK time
   const minutes = now.getUTCMinutes();
   const seconds = now.getUTCSeconds();
 
