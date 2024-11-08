@@ -165,11 +165,12 @@
     }
 
     .main-time {
-        background-color: rgba(226,31,122,0.963);
+        background-color: orange;
         background-image: url('../images/bg.svg');
         color: black;
         padding: 1.5em;
         font-size: 25px;
+        
         font-family: Arial, Helvetica, sans-serif;
         animation: rotate 2s infinite linear;
         position: relative;
