@@ -40,7 +40,7 @@ and false otherwise.---*/
 
 
     // Reverse the string
-    let x = [767];
+    /*let x = [767];
      str = x.toString();
     let reversedStr = str.split('').reverse().join('')
 
@@ -49,7 +49,46 @@ and false otherwise.---*/
     } else {
         console.log("Not a palindrome");
     }
+*/
 
+
+function romanNumerals(s){
+    const roman = {
+        V: 5,
+        X:10,
+        L:50,
+        C:100, 
+        D:500, 
+        M:1000
+    }
+
+    let total = 0;
+
+    for(let i = 0; i < s.length; i++){
+        const current = roman[s[i]];
+        const next =  roman[s[i]+ 1];
+
+
+
+      
+    }
+}
+
+
+
+function fizzBuzz(n) {
+    for(let i = 1; i <= n; i++ ){
+        if(i %3 == 0 && i% 5 == 0){
+            console.log('FizzBUzz');
+        }else if( i % 3 == 0){
+            console.log("Fizz");
+        }else if(i % 5 == 0){
+            console.log("Buzz");
+        }else{
+            console.log(i);
+        }
+    }
+}
    
 
 
