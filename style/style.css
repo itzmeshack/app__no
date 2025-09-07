@@ -32,14 +32,32 @@
     }
 
     .navigation-link {
-
-        display: flex;
-        justify-content: space-between;
-        padding: .9em;
-        color: white;
+     
+ display: flex;
+  align-items: center;
+  justify-content: space-between; /* text left, close right */
+  position: relative;
+  padding: 0 10px;
+  color: white;
+       
 
     }
 
+
+    .tex-header{
+        position: relative;
+    }
+    .txt
+
+        {
+
+            position: absolute;
+            left: 40%;
+            top: 30%;
+            bottom: 0%;
+            right: 0%;
+           font-weight: bolder;
+        }
 
 
 
@@ -76,6 +94,7 @@
 
 
     .all-container {
+     
         margin-top: 1em;
         margin-right: .5em;
         margin-left: .5em;
@@ -100,17 +119,20 @@
         align-items: center;
         position: relative;
 
-
+     padding-top: 10px;
 
 
 
     }
 
-
+.scan{
+    
+}
 
     .scan-code {
-        width: 75%;
-        position: relative;
+        width: 15.9rem;
+       
+      
         top: 1em;
         margin-bottom: 7em;
 
@@ -131,20 +153,43 @@
         padding: 1em;
         top: -6em;
     }
+.adult-section {
+  background-color: rgba(7, 7, 55, 0.99);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-    .adult-section {
-        display: flex;
-        justify-content: space-between;
-        padding: 10px 5px 10px 5px;
-        border-top: 1px solid black;
-        border-bottom: 1px solid black;
-        font-family: Arial, Helvetica, sans-serif;
-        position: relative;
-        top: -4em;
-        margin: 1em;
-        font-weight: bolder;
-        font-size: 20px;
-    }
+  padding: 12px 20px;
+  border-radius: 0 10px 10px 0; /* only right side rounded */
+  min-width: 140px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  margin-top: 0px;
+ 
+
+  transform: translateX(-50px); /* makes it "pop out" from left */
+  z-index: 2;
+}
+
+.adult-section p {
+  margin: 0;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+      
+      
+ 
+      
+
+
+
 
     .time-section {
         text-align: center;
