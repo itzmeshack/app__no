@@ -2,75 +2,117 @@
 <html lang="en">
 
 <head>
-    <meta http-equiv="Permissions-Policy" content="gyroscope=(self)">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Permissions-Policy" content="gyroscope=(self)">
+
     <title>App-stage</title>
+
+    <!-- CSS Stylesheets -->
     <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWAeA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- JavaScript -->
     <script defer src="js_script/index.js"></script>
 </head>
 
 <body>
-    <header class="main-container">
-        <div class="navigation-link">
-   <div class="txt-header">
-    <p class="txt">Your Ticket</p>
-   </div>
-        
-            <svg width="40" class="close" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
-  <!-- Outer circle -->
-  <circle cx="128" cy="128" r="96"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="22"/>
 
-  <!-- X inside -->
-  <line x1="88" y1="88" x2="168" y2="168"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-width="20"/>
-  <line x1="168" y1="88" x2="88" y2="168"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-width="22"/>
-</svg>
+    <!-- Header Section -->
+    <header class="main-container">
+
+        <div class="navigation-link">
+
+            <div class="txt-header">
+                <h1 class="txt">Your Ticket</h1>
+            </div>
+
+            <!-- Close Icon -->
+            <svg
+                width="40"
+                class="close"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 256 256"
+            >
+                <!-- Outer Circle -->
+                <circle
+                    cx="128"
+                    cy="128"
+                    r="96"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="22"
+                />
+
+                <!-- X Inside -->
+                <line
+                    x1="88"
+                    y1="88"
+                    x2="168"
+                    y2="168"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="20"
+                />
+
+                <line
+                    x1="168"
+                    y1="88"
+                    x2="88"
+                    y2="168"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-width="22"
+                />
+            </svg>
 
         </div>
-        
 
     </header>
 
 
+    <!-- Main Ticket Container -->
+    <div class="all-container">
 
-<div class="all-container">
-  
-  <div class="scanner">
-    <div class="adult-section">
-      <p>Adult</p>
-      <p>£6.30</p>
-    </div>
-    
-  
+        <!-- Ticket Scanner Section -->
+        <div class="scanner">
 
-    <div class="scan">
-      <img class="scan-code" src="images/Qr-code-ver-10.svg.png" alt="qrcode">
-    </div>
-  </div>
+            <div class="adult-section">
+                <p>1Adult</p>
+                <p>£6.60</p>
+            </div>
 
-  <div class="day-rider">
-    <h2 class="details">Northampton DayRider</h2>
-  </div>
+            <div class="scan">
+                <img
+                    class="scan-code"
+                    src="images/Qr-code-ver-10.svg.png"
+                    alt="QR code"
+                >
+            </div>
 
-        
+        </div>
+
+
+        <!-- Ticket Details -->
+        <div class="day-rider">
+            <h2 class="details">Northampton DayRider</h2>
+        </div>
+
+
+        <!-- Time and Expiry Section -->
         <div class="time-section">
+
             <div class="sec">
                 <p id="date"></p>
-
             </div>
-            
+
             <div id="phone" class="main-time">
 
                 <span class="word" id="word1">Flock</span>
@@ -80,30 +122,31 @@
             </div>
 
 
-
+            <!-- Ticket Expiry Information -->
             <div class="note-section">
 
-                <p id="timer" class="tic-expires">Ticket expires in: 1h: 47m: 30s</p>
-            
+                <p id="timer" class="tic-expires">
+                    Ticket expires in: 1h: 47m: 30s
+                </p>
 
+                <!-- Ticket Reference Code -->
                 <div class="code-section">
-                    <p class="code">1671-29240380135018-224</p>
-
+                    <p class="code">1671-29240380135018-224-RXuAJ</p>
                 </div>
+
+                <!-- More Details Link -->
                 <div class="more">
-                    <a class="links" href="#" class="more-details">
-                        More details >
+                    <a class="links more-details" href="#">
+                        More details &gt;
                     </a>
                 </div>
+
             </div>
+
         </div>
 
     </div>
 
-
-
 </body>
-
-
 
 </html>

@@ -247,8 +247,10 @@ function upadeDate(){
   ];
 
   let monthname = monthNames[month];
+const shortMonth = monthname.slice(0, 3);
 
-  document.getElementById('date').innerHTML = `Valid from: 00:00, ${day}  ${monthname} ${year}`;
+document.getElementById('date').innerHTML =
+    `Valid from: 00:00, ${day} ${shortMonth} ${year}`;
 
 }
 
