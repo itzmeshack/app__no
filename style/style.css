@@ -191,7 +191,7 @@
     ============================== */
 
     .main-time {
-        background-color: rgb(186, 177, 177);
+        background-color: orange;
         background-image: url('../images/bg.svg');
 
         color: black;
@@ -309,4 +309,3 @@
         font-weight: bold;
     }
 
-}
