@@ -1,29 +1,25 @@
 
 
 
-
 function handleDeviceOrientation(event) {
-  let gamma = event.gamma;
-  console.log('Gamma:', gamma);
+    let gamma = event.gamma;
 
-  // Define thresholds for orientation detection
-  let leftThreshold = -20;  // Adjust as needed
-  let rightThreshold = 20;  // Adjust as needed
+    if (gamma === null) return;
 
-  let backgroundElement = document.querySelector('.main-time');
+    console.log('Gamma:', gamma);
 
-  // Check if the device is tilted to the left
-  if (gamma < leftThreshold) {
-    backgroundElement.style.transform = 'rotate(20deg)';
-  }
-  // Check if the device is tilted to the right
-  else if (gamma > rightThreshold) {
-    backgroundElement.style.transform = 'rotate(-20deg)';
-  }
-  // Reset the rotation if not tilted
-  else {
-    backgroundElement.style.transform = 'rotate(0deg)';
-  }
+    let backgroundElement = document.querySelector('.main-time');
+
+    // Increase responsiveness
+    let sensitivity = 1.5;
+
+    // Calculate rotation based on device tilt
+    let rotation = gamma * sensitivity;
+
+    // Limit maximum rotation
+    rotation = Math.max(-30, Math.min(30, rotation));
+
+    backgroundElement.style.transform = `rotate(${rotation}deg)`;
 }
 
 function requestOrientationPermission() {
