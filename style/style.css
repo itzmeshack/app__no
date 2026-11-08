@@ -96,7 +96,7 @@
 
     .all-container {
         margin: 1rem 1.01em 0;
-        height: 84vh;
+        height: 87vh;
         background-color: rgb(255, 255, 255);
     }
 
@@ -266,16 +266,20 @@
        TICKET EXPIRY SECTION
     ============================== */
 
+
+
+     .note-section {
+        padding: 2em;
+        position: relative;
+        top: -5.6em;
+        
+    }
+
     .tic-expires {
         padding: 3em;
     }
 
-    .note-section {
-        padding: 2em;
-        position: relative;
-        top: -6.5em;
-    }
-
+   
 
     /* ==============================
        TICKET REFERENCE CODE
@@ -305,7 +309,7 @@
 
     .more {
         position: relative;
-        padding: 1em;
+        padding: 2em;
         font-weight: bold;
     }
 
