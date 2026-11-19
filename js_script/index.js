@@ -2,7 +2,7 @@
 
 const SENSITIVITY = 1.5;
 const MAX_ROTATION = 30;
-const SMOOTHING = 0.1; // lower = smoother but laggier (try 0.05 - 0.2)
+const SMOOTHING = 0.3; // lower = smoother but laggier (try 0.05 - 0.2)
 
 let targetRotation = 0;
 let currentRotation = 0;
