@@ -1,6 +1,6 @@
 // ---------- Tilt rotation ----------
 
-const SENSITIVITY = 2.5;
+const SENSITIVITY = 1.5;
 const MAX_ROTATION = 30;
 const SMOOTHING = 0.3; // lower = smoother but laggier (try 0.05 - 0.2)
 
